@@ -1,0 +1,5 @@
+2022-12-12 21:40:09.448 +09:00 [INF] Now listening on: https://localhost:7192
+2022-12-12 21:40:09.502 +09:00 [INF] Now listening on: http://localhost:5294
+2022-12-12 21:40:09.511 +09:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-12-12 21:40:09.512 +09:00 [INF] Hosting environment: Development
+2022-12-12 21:40:09.513 +09:00 [INF] Content root path: C:\Users\tranquocbaowindow\Downloads\SourceCode\HotelListing\HotelListing.API\
