@@ -1,7 +1,5 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
-
 
 namespace HotelListing.API.Data
 {
