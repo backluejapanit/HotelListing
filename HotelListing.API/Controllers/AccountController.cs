@@ -16,27 +16,27 @@ namespace HotelListing.API.Controllers
             this._authManager = authManager;
         }
 
-        // POST: api/Account/register
-        [HttpPost]
-        [Route("register")]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<ActionResult> Register([FromBody] ApiUserDto apiUserDto)
-        {
-            var errors = await _authManager.Register(apiUserDto);
+        //// POST: api/Account/register
+        //[HttpPost]
+        //[Route("register")]
+        //[ProducesResponseType(StatusCodes.Status400BadRequest)]
+        //[ProducesResponseType(StatusCodes.Status500InternalServerError)]
+        //[ProducesResponseType(StatusCodes.Status200OK)]
+        //public async Task<ActionResult> Register([FromBody] ApiUserDto apiUserDto)
+        //{
+        //    var errors = await _authManager.Register(apiUserDto);
 
-            if (errors.Any())
-            {
-                foreach (var error in errors)
-                {
-                    ModelState.AddModelError(error.Code, error.Description);
-                }
-                return BadRequest(ModelState);
-            }
+        //    if (errors.Any())
+        //    {
+        //        foreach (var error in errors)
+        //        {
+        //            ModelState.AddModelError(error.Code, error.Description);
+        //        }
+        //        return BadRequest(ModelState);
+        //    }
 
-            return Ok();
-        }
+        //    return Ok();
+        //}
 
         // POST: api/Account/login
         [HttpPost]

@@ -1,6 +1,7 @@
 ﻿using HotelListing.API.Data.Confirgurations;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace HotelListing.API.Data
@@ -21,6 +22,22 @@ namespace HotelListing.API.Data
             modelBuilder.ApplyConfiguration(new RoleConfiguration());
             modelBuilder.ApplyConfiguration(new CountryConfiguration());
             modelBuilder.ApplyConfiguration(new HotelConfiguration());
+        }
+    }
+
+    public class HotelListingDbContextFactory : IDesignTimeDbContextFactory<HotelListingDbContext>
+    {
+        public HotelListingDbContext CreateDbContext(string[] args) 
+        { 
+            IConfiguration config = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                .Build();
+
+            var optionBuilder = new DbContextOptionsBuilder<HotelListingDbContext>();
+            var conn = config.GetConnectionString("HotelListingDbConnectionString");
+            optionBuilder.UseSqlServer(conn);
+            return new HotelListingDbContext(optionBuilder.Options);
         }
     }
 }

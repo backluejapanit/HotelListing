@@ -4,7 +4,7 @@ using HotelListing.API.Models.Hotel;
 using HotelListing.API.Data;
 using HotelListing.API.Models.Users;
 
-namespace HotelListing.API.Core.Configurations
+namespace HotelListing.API.Configurations
 {
     public class MapperConfig : Profile
     {
