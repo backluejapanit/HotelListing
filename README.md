@@ -4,7 +4,6 @@ Referrence from Udemy course with a little custom
 Build up with Entity Framework Core, Generic Repository Pattern, SeriLog, SwaggerUI, JWT, API Health Checks, API Caching, Versioning and more...
 
 Note: You'll need a specific account to test API through live demo : https://exp-testingapi.azurewebsites.net
-(ping me for that)
 
 My summary portfolio: https://exp-bt-portfolio.netlify.app/
 
